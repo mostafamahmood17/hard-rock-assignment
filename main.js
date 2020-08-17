@@ -6,7 +6,7 @@ const inputField = document.getElementById("inputField");
 searchButton.addEventListener("click" , () => {
     
 if (inputField.value == "") {
-    alert("Pick a song!!!")
+    alert(`Pick a song!!!`)
 }
 else{
     // fetching data from the api
@@ -50,7 +50,7 @@ else{
             
 
             if (data.lyrics == undefined) {
-                document.getElementsByClassName('lyric')[0].innerHTML = "No lyrics found";
+                document.getElementsByClassName('lyric')[0].innerHTML = `Sorry, no lyrics found, search another one...`;
                 for (let i = 0; i < 10; i++) {
                     document.getElementsByClassName('single-result')[i].style.display = "none";
                 }
