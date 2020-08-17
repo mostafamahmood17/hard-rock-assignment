@@ -32,8 +32,10 @@ else{
         else{
             document.getElementsByClassName('minutes')[i].innerText = minutes + ':' + seconds;
         }  
-
+        
     }
+    
+    
     inputField.value = "";
     // looping to get the lyrics info, add event and getting lyrics from api
     for(let i = 0; i<10; i++){
@@ -50,7 +52,7 @@ else{
             
 
             if (data.lyrics == undefined) {
-                document.getElementsByClassName('lyric')[0].innerHTML = `Sorry, no lyrics found, search another one...`;
+                document.getElementsByClassName('lyric')[0].innerHTML = `Sorry, no lyrics found by this name`;
                 for (let i = 0; i < 10; i++) {
                     document.getElementsByClassName('single-result')[i].style.display = "none";
                 }
@@ -67,7 +69,7 @@ else{
     )
     }
     }
-    )
+    )   
 }
 }
 )
